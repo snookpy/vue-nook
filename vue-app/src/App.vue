@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header v-bind:title="title"></Header>
+    <Header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></Header>
     <Ninjas v-bind:ninjas="ninjas" />
     <Footer v-bind:title="title" />
   </div>
@@ -32,9 +32,9 @@ export default {
     };
   },
   methods: {
-    greeting: function() {
-      return "Heeey cowboy!";
-    }
+    updateTitle: function(updatedTitle){
+      this.title = updatedTitle
+    },
   }
 };
 </script>
