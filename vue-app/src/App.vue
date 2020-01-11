@@ -1,8 +1,8 @@
 <template>
   <div>
-    <Header></Header>
+    <Header v-bind:title="title"></Header>
     <Ninjas v-bind:ninjas="ninjas" />
-    <Footer />
+    <Footer v-bind:title="title" />
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   },
   data() {
     return {
-      title: "Your first Vue file, woo",
+      title: "Vue Ninjas",
       ninjas: [
         { name: "Ryu", speciality: "Vue Components", show: false },
         { name: "Crystal", speciality: "HTML Wizardry", show: false },
